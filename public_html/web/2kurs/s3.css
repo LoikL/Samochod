@@ -1,0 +1,80 @@
+h2
+{
+font-size:10pt;
+}
+
+body
+{
+background-color:yellow;
+font-size: 8pt;
+margin-left:13px;
+font-family: verdana, arial, serif, "times new roman";
+first-line :line-through;
+}
+
+*
+{
+margon-top:0pt;
+margon-bottom:0pt;
+}
+h5
+{
+font-style: italic;	
+padding-top: m;
+
+}
+
+p.zielone{
+color:green; word-spacing:1pt; text-align: center;
+}	
+
+	#s4{
+list-style-type:lower-alpha;
+}
+	#s3{
+list-style-type:square;
+}
+
+p.z{
+color:green; word-spacing:1pt; text-align: center;  text-indent:1.2em;
+}	
+p.p{
+color:green; word-spacing:1pt; text-align: center;  text-indent:1.2em;
+}	
+
+p.n{
+color:blue; font-size: 9pt; font-style: italic;	
+}
+
+<STYLE>
+
+  TABLE,TH,TD{border:2px solid black;border-collapse:collapse; 
+}
+
+  TH,TD{width:100px}
+
+  TH{height:30px}
+
+  CAPTION,TH,TD{padding:5px}
+
+  CAPTION{caption-side:top}
+
+  TH{background-color:;}
+
+  TD{background-color:;}
+
+ 
+
+  CAPTION{text-align:left;vertical-align:middle}
+
+  TH,TD{text-align:center;vertical-align:middle}
+
+
+  CAPTION{font:bold 20px "sans-serif"}
+
+  TH{font:bold 17px "sans-serif"}
+
+  TD{font:normal 15px "sans-serif"}</STYLE>
+
+</STYLE>
+

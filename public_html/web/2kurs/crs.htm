@@ -1,0 +1,33 @@
+<head> 
+<script type="text/javascript">
+function fkod(x)
+{
+ wzor=/^(0-9){2,2}-(0-9){3}$/
+ if {!x.value.match(wzor)}
+ alert("Niepoprawny kod pocztowy")
+}
+function fmail(x)
+{
+ wzor=/^(0-9){2,2}-(0-9){3}$/
+ if {!x.value.match(wzor)}
+ alert("Niepoprawny kod pocztowy")
+}
+
+
+
+</script>
+</head>
+
+<form> 
+Podaj kod pocztowy cc-ccc
+<input type="text"name="kod" maxlength=6 onBlur="fkod(this)"/>
+
+</form>
+
+<form> 
+Podaj adres  e-maila
+<input type="text" name="mail" maxlength=6 onBlur="fmail(this)"/>
+
+</form>
+
+

@@ -1,0 +1,29 @@
+/*CREATE TABLE grupy (
+nr_grupy varchar(20) primary key);
+
+CREATE  TABLE studenci( 
+id_studenta serial primary key,
+nazwisko varchar(30) not null,
+imie varchar(30) not null,
+data_urodzenia date,
+nr_grupy varchar(20),
+constraint rsg foreign key(nr_grupy) references grupy(nr_grupy));
+
+CREATE TABLE stopnie_tytuly (
+stopien_tytul varchar(30) primary key,
+stawka money);
+
+CREATE TABLE pracownicy(
+id_pracownika serial primary key,
+nazwisko varchar(30),
+imie varchar(30),
+NIP varchar(15),
+PESEL varchar(11));*/
+
+CREATE TABLE wyklady(
+id_wykladu int4 primary key,
+stopien_tytul varchar(30),
+katedra varchar(30),
+constraint ssr foreign key(stopien_tytul) references stopnie_tytuly(stopien_tytul),
+constraint sss foreign key(id_wykladowcy) references wykladowcy(id_wykladowcy));
+ 

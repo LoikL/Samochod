@@ -1,0 +1,83 @@
+<head>
+		 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<script type="text/javascript">
+
+ function sprKod(){	
+					wzorKP = /^[0-9]{2}\-[0-9]{3}$/;
+					if (!document.formularz.kod.value.match(wzorKP)) 
+					alert("Niepoprawny kod pocztowy");
+				 }
+				 
+				 
+			function sprEmail(){	
+					wzorEmail = /^[a-zA-Z0-9]+@([a-zA-Z0-9]+\.)+[a-zA-Z0-9]{2,4}$/;
+					if (!document.formularz.email.value.match(wzorEmail)) 
+					alert("Niepoprawny adres e-mail");
+				 }
+
+
+function  sprLC(){
+					var lc = document.formularz.liczbaCalkowita.value;
+					if(isNaN(lc))
+					alert("Wyrażenie zapisane nie jest liczbą całkowitą");
+					if(lc > 30 || lc < 10) 
+					alert("Liczba całkowita nie jest w przedziale [10-30]");
+				 }
+				 
+				 
+				function sprDzienTyg(){
+					var wybranyDzienTyg = document.formularz.dzienTygodnia.value;
+					var dzisiejszaData = new Date();
+					var dzisiejszyDzien = dzisiejszaData.getDay(); 
+					if(dzisiejszyDzien != wybranyDzienTyg)
+						confirm("Wybrany dzień tygodnia różni się od dzisiejszego");
+					}
+					
+					
+					
+					
+					function sprWym(){
+				if (document.formularz.kod.value == "")
+					{alert("Podaj kod pocztowy w formacie cc-ccc"); return false;}
+				else if (document.formularz.email.value == "")
+					{alert("Podaj swoj adres e-mail"); return false;}
+				else if (document.formularz.liczbaCalkowita.value == "")
+					{alert("(Wpisz liczbę całkowitą"); return false;}
+	else if (document.formularz.dzienTygodnia.value == "")
+					{alert("Wybierz dzień tygodnia"); return false;}
+				else if (document.formularz.zgodaP.checked == false)
+					{alert("Zaznacz zgodę na przetwarzanie danych!!!!");
+					document.formularz.zgodaP.focus();
+					return false;}
+				else
+					{alert("Wszystkie pola są wypełnione!!!"); return true;}
+				}
+</script>
+</head>
+<body>
+
+
+
+	 <form name="formularz" method="post" onsubmit="return sprWym()">
+			Podaj kod pocztowy w formacie cc-ccc:<input type="text" name="kod" size="6" maxlength="6" value="" onBlur="sprKod()"/><br><br>
+			Podaj swoj adres e-mail:<input type="text" name="email" size="20" maxlength="40" onBlur="sprEmail()"/><br><br>
+			Wpisz liczbę całkowitą: <input type="text" name="liczbaCalkowita" size="2" maxlength="2" onBlur="sprLC()"/><br><br>
+			Wybierz dzień tygdodnia:<br>
+					<select name="dzienTygodnia" size="7" onBlur="sprDzienTyg()">
+			<option value="1" /> Poniedziałek
+				<option value="2" /> Wtorek
+				<option value="3" /> Środa
+				<option value="4" /> Czwartek
+				<option value="5" /> Piątek
+				<option value="6" /> Sobota
+				<option value="0" /> Niedziela
+				</select><br><br>
+			<input type="checkbox" name="zgodaP id="zgoda"/>
+			<label for="zgoda">Zgoda na przetwarzanie danych!!!</label><br><br>
+			<input type="submit" value="Wysłać"/>
+		</form>
+</body>
+ </html>
+
+
+
